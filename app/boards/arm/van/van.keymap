@@ -10,6 +10,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+         bh: layer_taps 
+        {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer-Tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <215>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+/ {
 	keymap {
 		compatible = "zmk,keymap";
 
